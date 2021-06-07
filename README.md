@@ -1,5 +1,4 @@
-# WelCome in my computer vision programs
-
+# Hello Guy's 👋
 <h2>1. Mouse Hand Gestures 
   2. Super heros Mask </h2>
  
@@ -12,4 +11,4 @@
   
   <img  src="https://github.com/sagarjangid41/CV2_programs/blob/main/face_mask/mukota.png" />
   
-  <h2 >Thank You guy's</h2>
+  <h2 >Thank You guy's 😂</h2>
