@@ -12,7 +12,7 @@ hand=mp_hands.Hands(max_num_hands=2,min_detection_confidence=0.7, min_tracking_c
 cap=cv2.VideoCapture(0)
 while True:
     ret,photo = cap.read()
-    photo=cv2.resize(photo,(int(width/2),int(height/2)))
+    photo=cv2.resize(photo,(int(width/3),int(height/2)))
     results=hand.process(cv2.cvtColor(photo, cv2.COLOR_BGR2RGB))
     if results.multi_handedness:
 #         print('Handedness:', results.multi_handedness)
@@ -26,15 +26,15 @@ while True:
 #                     cv2.line(photo ,(0,0),(int(ss.x*w),int(ss.y*h)),(0,255,0), 2)
                     l4x = int(ss.x*w)
                     l4y = int(ss.y*h)
-                    mouse.position = (int(ss.x*w)*2,int(ss.y*h)*2)
+                    mouse.position = (int(ss.x*w)*3,int(ss.y*h)*2)
                 if ids == 8:
                     l8x = int(ss.x*w)
                     l8y = int(ss.y*h)
             ly = l4y - l8y
-            if ly < 20:
+            if ly < 15:
+                photo = cv2.circle(photo, (l4x,l4y), 7, (255, 0, 0), -1)
                 mouse.press(Button.left)
-#                 print("y :" ,l4y - l8y)
-            elif ly > 40: 
+            elif ly > 27: 
                 mouse.release(Button.left)
     cv2.imshow('hi',photo)
     if cv2.waitKey(1) == 13: #13 is the Enter Key
