@@ -3,9 +3,9 @@
 <h2>1. Mouse Hand Gestures 
   2. Super heros Mask </h2>
  
- <b>Let's use <b>
+ <h2>Let's use </h2>
   <h2> Required libraries <br> 
-    1. cv2
+    1. cv2<br>
     2. mediapipe</h2>
   
   <h1> Run code and enjoy😂👍</h1>
